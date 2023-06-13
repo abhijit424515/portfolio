@@ -30,11 +30,11 @@ const contacts: {
 
 function App() {
   return (
-    <div className="flex flex-col items-center gap-y-[1rem]">
+    <div className="flex flex-col items-center gap-y-4 md:px-2 px-4">
       <Header />
-      <div className="flex flex-col md:flex-row gap-x-[2rem] my-[15vh] items-center">
+      <div className="flex flex-col md:flex-row md:gap-x-8 gap-y-8 md:h-[60vh] h-[80vh] items-center justify-center">
         <div>
-          <p className="text-[2.5rem] font-[700] text-transparent bg-clip-text bg-gradient-to-tl from-cyan-500 to-green-600 drop-shadow-sm leading-[1] mb-[1rem]">
+          <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-cyan-500 to-green-600 drop-shadow-sm leading-[1] mb-4">
             Software <br />
             Developer
           </p>
@@ -63,12 +63,11 @@ function App() {
           className="w-[30vh] h-[30vh] object-cover border-2 border-black"
         />
       </div>
-      <div className="flex items-center text-[1.5rem] gap-x-[1rem]">
-        <p>Tech Stack </p>
-        <p>|</p>
-        <div className="flex gap-x-[0.5rem]">
+      <div className="flex md:flex-row flex-col items-center text-2xl md:gap-x-4 gap-y-4 md:mt-0 mt-[0vh] mb-4">
+        <p>Tech Stack</p>
+        <div className="grid md:grid-cols-12 grid-cols-6 gap-2">
           {techStackIcons.map((x, i) => (
-            <div className="h-[2rem] w-[2rem] rounded-full p-[0.2rem]">
+            <div key={i} className="h-8 w-8 rounded-full p-[0.2rem]">
               <img
                 className="w-full h-full"
                 key={i}
@@ -79,12 +78,11 @@ function App() {
           ))}
         </div>
       </div>
-      <div className="flex items-center text-[1.5rem] gap-x-[1rem]">
+      <div className="flex md:flex-row flex-col items-center text-2xl md:gap-x-4 gap-y-4 md:mb-0 mb-[10vh]">
         <p>Tools </p>
-        <p>|</p>
-        <div className="flex gap-x-[0.5rem]">
+        <div className="grid md:grid-cols-6 grid-cols-3 gap-2">
           {toolStack.map((x, i) => (
-            <div className="h-[2rem] w-[2rem] rounded-full p-[0.2rem]">
+            <div key={i} className="h-[2rem] w-[2rem] rounded-full p-[0.2rem]">
               <img
                 className="w-full h-full"
                 key={i}
